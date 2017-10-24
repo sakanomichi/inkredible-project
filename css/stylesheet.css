@@ -1,0 +1,370 @@
+/* RESET */
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, a, article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+ 
+* {
+  box-sizing: border-box;
+}
+
+article, aside, audio, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {
+  display: block;
+}
+
+/* forcing IE9-11 to display SVG correctly */
+
+img[src$=".svg"] {
+	width: 100%;
+	}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+    color: #373838;
+}
+
+main {
+	height: 100%;
+}
+
+main, footer {
+	padding-left: 20em;
+}
+
+nav {
+    display: none;
+}
+
+.page-footer, nav {
+    background: #291E53;
+}
+
+.side-nav {
+	background-image: url("../images/navbg2.png");
+	width: 20rem;
+}
+
+#nav-wrapper ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#slide-out li {
+	margin-bottom: 3em;
+}
+
+#logo {
+	width: 80%;
+}
+
+img {
+	width: 100%;
+}
+
+#blurb {
+	margin: 1em auto;
+	font-size: 2.2rem;
+}
+
+.btn {
+	text-transform: uppercase;
+    background-color: #6058A6;
+}
+
+.btn:hover {
+    background-color: #291E53;
+}
+
+#home {
+	margin: 0 auto;
+	background-image: url("../images/seamless.png");
+}
+
+#home-content {
+	position: relative;
+	display: inline;
+}
+
+#pens-home {
+	margin: 0 auto;
+	background-image: url("../images/seamless.png");
+}
+
+#pen {
+	position: absolute;
+	left: 85%;
+	top: -155%;
+	max-width: 40%;
+	z-index: 2;
+}
+
+#intro {
+    background-image: url("../images/seamless.png");
+}
+
+#about {
+	background:
+		url("../images/splatter1.png") no-repeat right top,
+		url("../images/seamless.png");
+		;
+}
+
+#pens-about {
+	background:
+		url("../images/splatter2.png") no-repeat left top,
+		url("../images/seamless.png");
+		;
+}
+
+#intro, #about {
+	height: 60vh;
+}
+
+p {
+	margin: 1em auto;
+}
+
+.parallax-container#home {
+    height: 100vh;
+}
+
+.parallax-container#parallax1, .parallax-container#parallax2 {
+  height: 40vh;
+}
+
+#main-wrapper {
+	margin: 0 auto;
+	width: 100%;
+}
+	
+.content {
+	width: 62em;
+	margin: 0 auto;
+}
+
+#pens-about {
+    height: 40vh;
+}
+
+.slider .indicators .indicator-item {
+	background-color: #291E53;
+}
+	
+.slider .indicators .indicator-item.active {
+	background-color: #8a4f80;
+}
+
+.slider {
+	height: 50em;
+}
+
+/* Typography */
+
+@font-face {
+	font-family: 'Bebas Neue';
+	src: url("../fonts/bebasneue/BebasNeue-webfont.woff");
+}
+
+@font-face {
+	font-family: 'Bebas Neue';
+	src: url("../fonts/bebasneue/BebasNeue-Book.otf");
+	font-weight: 300;
+}
+
+.side-nav li a {
+	font-family: 'Bebas Neue';
+	text-transform: uppercase;
+	font-size: 4rem;
+    letter-spacing: 0.2rem;
+    color: #fff;
+    text-shadow: 0 0 0 #333,
+    0 6px 8px rgba(0,0,0,.4),
+    0 9px 10px rgba(0,0,0,.15),
+    0 30px 10px rgba(0,0,0,.18),
+    0 15px 10px rgba(0,0,0,.21);
+}
+
+.side-nav li>a:hover {
+    background: none;
+    transition:all 0.1s ease-in-out;
+    color: #9c93f0;
+}
+
+h2 {
+	font-size: 3.4rem;
+	font-family: 'Bebas Neue';
+	letter-spacing: 0.2rem;
+	color: #291E53;
+}
+
+h3 {
+	font-size: 4rem;
+	font-family: 'Bebas Neue';
+	letter-spacing: 0.2rem;
+	color: #1f1816;
+}
+
+h5 {
+	font-size: 1.5rem;
+	color: #1f1816;
+}
+
+#section2  p {
+	font-size: 1.3rem;
+	margin-bottom: 1.2rem;
+}
+
+::selection {
+    background: #AFA3A0;
+    color: #291E53;
+}
+
+nav i.material-icons {
+	font-size: 2.5em;
+}
+
+@media screen and (max-width: 88em) {
+    .content {
+        width: 80%;
+    }
+    
+    #pen {
+        top: -130%;
+    }
+	
+	.parallax-container#parallax1, .parallax-container#parallax2 {
+		height: 25vh;
+	}
+	
+	#about, #pen-about, #home, #intro {
+		height: 60vh;
+	}
+	
+	#about, #pens-about {
+		background: none,
+		url("../images/seamless.png");
+	}
+}
+
+@media screen and (max-width: 72em) {
+    .content {
+        width: 78%;
+    }
+    
+    .side-nav, .slide-out {
+        width: 22%;
+    }
+    
+    main, footer {
+        padding-left: 22%;
+    }
+
+	.slide-out li {
+		margin-bottom: 1em;
+	}
+    
+    .side-nav li a {
+        font-size: 3.5rem;
+    }
+    
+    #pen {
+        top: -130%;
+    }
+	
+	#blurb {
+		margin: 1em auto;
+		font-size: 1.8rem;
+	}
+
+}
+
+@media screen and (max-width: 68em) {
+    #pen {
+        top: -120%;
+    }
+}
+	
+@media screen and (max-width: 62em) {
+    header, main, footer {
+        padding-left: 0;
+    }
+
+    .side-nav {
+        width: 40%;
+    }
+    
+    #pen {
+        display: none;
+    }
+    
+    .content {
+        width: 100%;
+        margin: 0 auto;
+        padding: 1.5em;
+    }
+    
+	.parallax-container#home {
+		height: 50vh;
+	}
+
+	.section {
+		margin-bottom: 1em;
+	}
+	
+	#about, #intro {
+		height: 100%;
+	}
+
+    #home-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    a.btn {
+        align-self: left;
+    }
+    
+    nav {
+        display: block;
+    }
+    
+    #logo {
+        width: 28rem;
+    }
+    
+    #blurb {
+        margin: 1em auto;
+        font-size: 1.4rem;
+    }
+    
+    #slide-out li {
+        margin-bottom: 2rem;
+    }
+
+    #slide-out li a {
+        font-size: 4rem;
+    }
+}
+	
+@media screen and (max-width: 38em) {
+
+	#logo {
+		width: 25rem;
+	}
+
+    .side-nav {
+        width: 60%;
+    }
+    
+	h2 {
+		font-size: 3.1rem;
+		line-height: 1em;
+	}
+}
