@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pens | Inkredible</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="css/materialize.css">
+	<link rel="stylesheet" href="css/stylesheet.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
+	<script type="text/javascript" src="js/ScrollMagic-master/js/lib/greensock/TweenMax.min.js"></script>
+	<script type="text/javascript" src="js/ScrollMagic-master/scrollmagic/uncompressed/ScrollMagic.js"></script>
+	<script type="text/javascript" src="js/ScrollMagic-master/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+	<script type="text/javascript" src="js/ScrollMagic-master/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
+
+</head>
+<body>
+    <div id="nav-wrapper">
+	<ul id="slide-out" class="side-nav fixed">
+		<li><a href="index.html#home" class="first after">Home</a></li>
+		<li><a href="index.html#about" class="first after">About</a></li>
+		<li><a href="pens.html" class="active first after">Pens</a></li>
+		<li><a href="#!" class="first after">Paper</a></li>
+		<li><a href="#!" class="first after">Ink</a></li>
+	</ul>
+    </div>
+
+	<main>
+        <nav><a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a></nav>
+	
+		<div id="main-wrapper">
+		<section id="pens-home" class="valign-wrapper">
+		<div class="slider">
+			<ul class="slides">
+			  <li>
+				<img src="images/edison.jpg">
+			  </li>
+			  <li>
+				<img src="images/metro.jpg">
+			  </li>
+			  <li>
+				<img src="images/noodlers.jpg">
+			  </li>
+			  <li>
+				<img src="images/twsbi.jpg">
+			  </li>
+			</ul>
+		</div>
+		</section>
+		
+		<section id="pens-about" class="valign-wrapper">
+			<div class="content row">
+			<div class="offset-s4 col s8">
+				<h2>Pens that are big and purple</h2>
+                <p>Cupcake ipsum dolor sit amet. Jelly-o candy carrot cake sweet roll marshmallow. Jelly-o cake jelly muffin ice cream ice cream cupcake muffin. Ice cream cheesecake tart ice cream candy canes fruitcake cake. Bear claw powder tootsie roll sugar plum sweet roll pie. Chocolate bar jelly beans lollipop pie dessert. Jelly-o chocolate cake cake biscuit sweet powder cupcake. Cake sweet lollipop croissant sugar plum jelly cotton candy cotton candy wafer.</p>				
+				</div>
+			</div>
+		</section>
+  </div>
+        
+
+		</section>
+		</div>
+	</main>
+    
+        <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Footer</h5>
+                <p class="grey-text text-lighten-4">Something goes here eventually.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2017 Inkredible, Ara Institute of Canterbury
+            </div>
+          </div>
+        </footer>
+
+	
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../ScrollMagic-master/js/lib/greensock/plugins/ScrollToPlugin.min.js"></script>
+	<script type="text/javascript" src="js/materialize.js"></script>
+	<script>
+    // Initialize collapse button
+	$(".button-collapse").sideNav();
+	
+	    $(document).ready(function(){
+      $('.parallax').parallax();
+    });
+	
+        // init controller
+    var controller = new ScrollMagic.Controller();
+
+    // build tween
+    var tween = TweenMax.from("#animate", 0.5, {autoAlpha: 0, scale: 0.7});
+
+    // build scene
+    var scene = new ScrollMagic.Scene({triggerElement: "section#home", duration: 200, triggerHook: "onLeave"})
+                    .setTween(tween)
+                    //.addIndicators() // add indicators (requires plugin)
+                    .addTo(controller);
+
+    // change behaviour of controller to animate scroll instead of jump
+    controller.scrollTo(function (newpos) {
+        TweenMax.to(window, 0.5, {scrollTo: {y: newpos}});
+    });
+
+    //  bind scroll to anchor links
+    $(document).on("click", "a[href^='#']", function (e) {
+        var id = $(this).attr("href");
+        if ($(id).length > 0) {
+            e.preventDefault();
+
+            // trigger scroll
+            controller.scrollTo(id);
+
+                // if supported by the browser we can even update the URL.
+            if (window.history && window.history.pushState) {
+                history.pushState("", document.title, id);
+            }
+        }
+    });
+	
+	  $('.carousel.carousel-slider').carousel({fullWidth: false});
+
+	
+	$(document).ready(function(){
+      $('.slider').slider();
+    });
+
+	// Pause slider
+$('.slider').slider('pause');
+// Start slider
+$('.slider').slider('start');
+// Next slide
+$('.slider').slider('next');
+// Previous slide
+$('.slider').slider('prev');
+</script>
+</body>
+</html>

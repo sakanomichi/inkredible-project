@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Home | Inkredible</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="css/materialize.css">
+	<link rel="stylesheet" href="css/stylesheet.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
+	<script type="text/javascript" src="js/ScrollMagic-master/js/lib/greensock/TweenMax.min.js"></script>
+	<script type="text/javascript" src="js/ScrollMagic-master/scrollmagic/uncompressed/ScrollMagic.js"></script>
+	<script type="text/javascript" src="js/ScrollMagic-master/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+	<script type="text/javascript" src="js/ScrollMagic-master/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
+
+</head>
+<body>
+    <div id="nav-wrapper">
+	<ul id="slide-out" class="side-nav fixed">
+		<li><a href="index.html#home" class="active first after">Home</a></li>
+		<li><a href="index.html#about" class="first after">About</a></li>
+		<li><a href="pens.html" class="first after">Pens</a></li>
+		<li><a href="#!" class="first after">Paper</a></li>
+		<li><a href="#!" class="first after">Ink</a></li>
+	</ul>
+    </div>
+
+	<main>
+        <nav><a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a></nav>
+	
+		<div id="main-wrapper">
+		<section id="home" class="valign-wrapper parallax-container">
+			<div class="content" id="home-content"> 
+				<img id="pen" src="images/platinum.png">
+				<div id="logo"><img src="images/logotext.png" class="logo-text"></div>
+				<p id="blurb">How going analogue in the digital age can help the planet, and why fountain pens are more fashionable than old-fashioned.</p>
+				<a href="#intro" class="btn waves-effect waves-light btn-large">Find Out</a>
+			</div>
+		</section>	
+		
+		<div class="parallax-container hide-on-med-and-down" id="parallax1">
+			<div class="parallax"><img src="images/parallax2.jpg"></div>
+		</div>
+		
+		<section id="intro" class="valign-wrapper">
+			<div class="content row">
+			<div class="col s12">
+				<h2>Why fountain pens?</h2>
+				<p>Muffin brownie lemon drops. Cupcake tiramisu cake. Cake oat cake sweet cheesecake soufflé. Chocolate biscuit lollipop dessert.</p>
+
+				<p>Liquorice danish apple pie. Biscuit bonbon toffee. Carrot cake jujubes dessert dragée tiramisu. Croissant dessert candy canes sweet chocolate cake chocolate cake chocolate bar biscuit.</p>
+				
+				<p>Tootsie roll lollipop toffee. Marzipan soufflé cheesecake marshmallow. Brownie brownie bonbon liquorice candy canes chocolate carrot cake sugar plum.</p>
+				</div>
+			</div>
+		</section>
+		
+		<div class="parallax-container hide-on-med-and-down" id="parallax2">
+			<div class="parallax"><img src="images/parallaxpurple.jpg"></div>
+		</div>
+		
+		<section id="about" class="valign-wrapper">
+			<div class="content row">
+			<div class="col s12">
+				<h2>About Us</h2>
+                <p>Cupcake ipsum dolor sit amet. Jelly-o candy carrot cake sweet roll marshmallow. Jelly-o cake jelly muffin ice cream ice cream cupcake muffin. Ice cream cheesecake tart ice cream candy canes fruitcake cake. Bear claw powder tootsie roll sugar plum sweet roll pie. Chocolate bar jelly beans lollipop pie dessert. Jelly-o chocolate cake cake biscuit sweet powder cupcake. Cake sweet lollipop croissant sugar plum jelly cotton candy cotton candy wafer.</p>
+				
+				<p>Cookie chocolate jelly-o cake pastry. Icing jujubes cookie cookie brownie. Jujubes pastry jelly beans. Dessert pudding gummies jelly-o. Oat cake wafer dessert candy canes jelly gummi bears. Sweet roll bear claw oat cake tart soufflé lollipop marzipan. Dessert pie cotton candy pie. Jelly croissant dessert.</p>				
+				</div>
+			</div>
+		</section>
+		
+		</div>
+	</main>
+    
+        <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Footer</h5>
+                <p class="grey-text text-lighten-4">Something goes here eventually.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2017 Inkredible, Ara Institute of Canterbury
+            </div>
+          </div>
+        </footer>
+
+	
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../ScrollMagic-master/js/lib/greensock/plugins/ScrollToPlugin.min.js"></script>
+	<script type="text/javascript" src="js/materialize.js"></script>
+	<script>
+    // Initialize collapse button
+	$(".button-collapse").sideNav();
+	
+	    $(document).ready(function(){
+      $('.parallax').parallax();
+    });
+	
+        // init controller
+    var controller = new ScrollMagic.Controller();
+
+    // build tween
+    var tween = TweenMax.from("#animate", 0.5, {autoAlpha: 0, scale: 0.7});
+
+    // build scene
+    var scene = new ScrollMagic.Scene({triggerElement: "section#home", duration: 200, triggerHook: "onLeave"})
+                    .setTween(tween)
+                    //.addIndicators() // add indicators (requires plugin)
+                    .addTo(controller);
+
+    // change behaviour of controller to animate scroll instead of jump
+    controller.scrollTo(function (newpos) {
+        TweenMax.to(window, 0.5, {scrollTo: {y: newpos}});
+    });
+
+    //  bind scroll to anchor links
+    $(document).on("click", "a[href^='#']", function (e) {
+        var id = $(this).attr("href");
+        if ($(id).length > 0) {
+            e.preventDefault();
+
+            // trigger scroll
+            controller.scrollTo(id);
+
+                // if supported by the browser we can even update the URL.
+            if (window.history && window.history.pushState) {
+                history.pushState("", document.title, id);
+            }
+        }
+    });
+	</script>
+</body>
+</html>
